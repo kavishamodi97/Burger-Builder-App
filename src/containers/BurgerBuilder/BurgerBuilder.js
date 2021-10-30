@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
@@ -100,7 +99,7 @@ const BurgerBuilder = props => {
             />
         );
     }
-  
+
     return (
         <Auxiliary>
             <Modal show={purchasing} modalClosed={purchaseCancelHandler}>

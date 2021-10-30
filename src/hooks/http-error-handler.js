@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-
+// eslint-disable-next-line
 export default httpClient => {
-  const [error, setError] = useState(null);
 
+  const [error, setError] = useState(null);
   const reqInterceptor = httpClient.interceptors.request.use(req => {
     setError(null);
     return req;
@@ -19,6 +19,7 @@ export default httpClient => {
       httpClient.interceptors.request.eject(reqInterceptor);
       httpClient.interceptors.response.eject(resInterceptor);
     };
+    // eslint-disable-next-line
   }, [reqInterceptor, resInterceptor]);
 
   const errorConfirmedHandler = () => {
